@@ -34,7 +34,7 @@ export function Header() {
                             href="#apply"
                             className="px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm"
                         >
-                            Aplicar
+                            Registra tu idea
                         </a>
                     </nav>
 
@@ -86,7 +86,7 @@ export function Header() {
                         onClick={() => setIsMenuOpen(false)}
                         className="px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-center"
                     >
-                        Aplicar
+                        Registra tu idea
                     </a>
                 </nav>
             </div>
