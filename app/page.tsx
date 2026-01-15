@@ -31,7 +31,15 @@ export default function LandingPage() {
                 rel="noopener noreferrer"
                 className="px-8 md:px-12 py-4 md:py-5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-base md:text-lg"
               >
-                Aplicar Ahora
+                Registra tu idea
+              </a>
+              <a
+                href="https://luma.com/cavos?k=c"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="px-8 md:px-12 py-4 md:py-5 bg-[#f7eded] text-black rounded-full font-medium hover:bg-[#efe5e5] transition-all text-base md:text-lg"
+              >
+                Únete a los Meetups →
               </a>
               <a
                 href="#about"
@@ -63,7 +71,7 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {/* 1. Registro */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center">
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center flex flex-col">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
                 1
               </div>
@@ -71,14 +79,14 @@ export default function LandingPage() {
               <div className="text-base md:text-lg font-medium mb-2 text-black">
                 Registro
               </div>
-              <div className="text-sm text-black/60 mb-4">
+              <div className="text-sm text-black/60 mb-4 grow">
                 Regístrate en DoraHacks
               </div>
               <a
                 href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
               >
                 Registrarse
               </a>
@@ -104,153 +112,174 @@ export default function LandingPage() {
             </div>
 
             {/* 3. Primer Meetup */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-black text-center">
                 3
               </div>
-              <div className="text-sm text-black/60 mb-2">
+              <div className="text-sm text-black/60 mb-2 text-center">
                 Sábado 07 Feb, 2026
               </div>
-              <div className="flex gap-2 justify-center mb-2 flex-wrap">
+              <div className="flex gap-2 justify-center mb-4 flex-wrap">
                 <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  Presencial
+                  Presencial y Online
                 </div>
                 <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  10:00am - 6:00pm
+                  10:00 - 18:00
                 </div>
               </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
+              <div className="text-base md:text-lg font-medium mb-3 text-black text-center">
                 Primer Meetup
               </div>
-              <div className="text-sm text-black/60 mb-1">
-                <strong>Tema:</strong> Presentación del ecosistema +
-                herramientas (Cavos) + cómo empezar +{" "}
-                <a
-                  href="https://starkup.sh/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  starkup.sh
-                </a>{" "}
-                + Apoyo de mentores
+              <div className="text-sm text-black/60 mb-4 grow">
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Fundamentales del ecosistema Starknet</li>
+                  <li>Proceso de desarrollo con IA sobre Starknet</li>
+                  <li>Qué busca la fundación de Starknet y Starkware</li>
+                </ul>
               </div>
-              <div className="text-xs text-black/50 mb-4">
-                Lugar: Por confirmar
+              <div className="border-t border-black/10 pt-3 mb-3">
+                <ul className="text-xs text-black/50 space-y-1.5">
+                  <li>• Comida y bebidas incluidas</li>
+                  <li>• Lugar: TBD</li>
+                </ul>
               </div>
               <a
-                href="#"
+                href="https://luma.com/uwo84vbr"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
               >
                 Reservar Spot
               </a>
             </div>
 
             {/* 4. Segundo Meetup */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-black text-center">
                 4
               </div>
-              <div className="text-sm text-black/60 mb-2">
+              <div className="text-sm text-black/60 mb-2 text-center">
                 Jueves 12 Feb, 2026
               </div>
-              <div className="flex gap-2 justify-center mb-2 flex-wrap">
+              <div className="flex gap-2 justify-center mb-4 flex-wrap">
                 <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
                   En línea
                 </div>
                 <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  6:00pm
+                  18:00 - 22:00 GMT-6
                 </div>
               </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
+              <div className="text-base md:text-lg font-medium mb-4 text-black text-center">
                 Segundo Meetup
               </div>
-              <div className="text-sm text-black/60 mb-1">
-                <strong>Tema:</strong> Master class de Cairo con Damian Piñones
-                + Flujo de IA + Apoyo de mentores + OPUS
+              <div className="text-sm text-black/60 mb-4 grow">
+                <ul className="list-disc list-inside space-y-2">
+                  <li>DeFi y BTCFi en Starknet</li>
+                  <li>Vesu (préstamos con Bitcoin y USDC)</li>
+                  <li>
+                    Extended API (futuros perpetuos, funding rate arbitrage y
+                    delta neutral)
+                  </li>
+                  <li>Mentorship para sus proyectos</li>
+                </ul>
               </div>
-              <div className="text-xs text-black/60 mb-1">
-                Cómo usar IA en diferentes pasos de tu viaje en el hackathon
+              <div className="border-t border-black/10 pt-3 mb-3">
+                <ul className="text-xs text-black/50 space-y-1.5">
+                  <li>• Lugar: En línea</li>
+                </ul>
               </div>
-              <div className="text-xs text-black/50 mb-4">Lugar: En línea</div>
               <a
-                href="#"
+                href="https://luma.com/flmah653"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
               >
                 Unirse a la Reunión
               </a>
             </div>
 
             {/* 5. Tercer Meetup */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-black text-center">
                 5
               </div>
-              <div className="text-sm text-black/60 mb-2">
+              <div className="text-sm text-black/60 mb-2 text-center">
                 Sábado 21 Feb, 2026
               </div>
-              <div className="flex gap-2 justify-center mb-2 flex-wrap">
+              <div className="flex gap-2 justify-center mb-4 flex-wrap">
                 <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  Presencial
+                  Presencial y Online
                 </div>
                 <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  10:00am - 6:00pm
+                  10:00 - 18:00
                 </div>
               </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
+              <div className="text-base md:text-lg font-medium mb-4 text-black text-center">
                 Tercer Meetup
               </div>
-              <div className="text-sm text-black/60 mb-1">
-                <strong>Tema:</strong> Necesidades del ecosistema (Pro BTC +
-                Vesu) + Apoyo de mentores
+              <div className="text-sm text-black/60 mb-4 grow">
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Espacio para codear todo el día y pulir proyectos</li>
+                  <li>Recibir feedback y corregir bugs</li>
+                  <li>
+                    Aclarar dudas y hacer que los proyectos luzcan profesionales
+                  </li>
+                </ul>
               </div>
-              <div className="text-xs text-black/50 mb-4">
-                Lugar: Por confirmar
+              <div className="border-t border-black/10 pt-3 mb-3">
+                <ul className="text-xs text-black/50 space-y-1.5">
+                  <li>• Comida y bebidas incluidas</li>
+                  <li>• Lugar: TBD</li>
+                </ul>
               </div>
               <a
-                href="#"
+                href="https://luma.com/k6vwbpk3"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
               >
                 Reservar Spot
               </a>
             </div>
 
             {/* 6. Cuarto Meetup */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
+              <div className="text-3xl md:text-4xl font-bold mb-3 text-black text-center">
                 6
               </div>
-              <div className="text-sm text-black/60 mb-2">
+              <div className="text-sm text-black/60 mb-2 text-center">
                 Jueves 26 Feb, 2026
               </div>
-              <div className="flex gap-2 justify-center mb-2 flex-wrap">
+              <div className="flex gap-2 justify-center mb-4 flex-wrap">
                 <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
                   En línea
                 </div>
                 <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  6:00pm
+                  17:00 - 22:00 GMT-6
                 </div>
               </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
+              <div className="text-base md:text-lg font-medium mb-4 text-black text-center">
                 Cuarto Meetup
               </div>
-              <div className="text-sm text-black/60 mb-1">
-                <strong>Tema:</strong> Apoyo de mentores + Consejos finales
+              <div className="text-sm text-black/60 mb-4 grow">
+                <ul className="list-disc list-inside space-y-2">
+                  <li>Revisar últimos detalles de los proyectos y pulirlos</li>
+                  <li>
+                    Revisar pitch decks para asegurar calidad del submission
+                  </li>
+                  <li>Enfoque en la presentación del producto</li>
+                </ul>
               </div>
-              <div className="text-xs text-black/50 mb-4">
-                Lugar: Por confirmar
+              <div className="border-t border-black/10 pt-3 mb-3">
+                <ul className="text-xs text-black/50 space-y-1.5">
+                  <li>• Lugar: En línea</li>
+                </ul>
               </div>
               <a
-                href="#"
+                href="https://luma.com/m3rnfwy6"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
               >
                 Unirse a la Reunión
               </a>
@@ -312,7 +341,7 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
             <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
               <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
                 100%
@@ -356,6 +385,93 @@ export default function LandingPage() {
               <div className="text-sm text-black/60">
                 Oportunidad de grants post-hackathon
               </div>
+            </div>
+          </div>
+
+          {/* Meetups Details */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
+            {/* Primer Evento Presencial */}
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
+              <div className="text-sm text-black/60 mb-2">
+                Sábado 07 Feb, 2026
+              </div>
+              <div className="text-base md:text-lg font-medium mb-2 text-black">
+                Primer Meetup Presencial
+              </div>
+              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
+                10:00 - 18:00
+              </div>
+              <a
+                href="https://luma.com/uwo84vbr"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
+              >
+                Reservar Spot
+              </a>
+            </div>
+
+            {/* Primera Clase Virtual */}
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
+              <div className="text-sm text-black/60 mb-2">
+                Jueves 12 Feb, 2026
+              </div>
+              <div className="text-base md:text-lg font-medium mb-2 text-black">
+                Primera Clase Virtual
+              </div>
+              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
+                18:00 - 22:00 GMT-6
+              </div>
+              <a
+                href="https://luma.com/flmah653"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
+              >
+                Unirse a la Reunión
+              </a>
+            </div>
+
+            {/* Segundo Evento Presencial */}
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
+              <div className="text-sm text-black/60 mb-2">
+                Sábado 21 Feb, 2026
+              </div>
+              <div className="text-base md:text-lg font-medium mb-2 text-black">
+                Segundo Meetup Presencial
+              </div>
+              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
+                10:00 - 18:00
+              </div>
+              <a
+                href="https://luma.com/k6vwbpk3"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
+              >
+                Reservar Spot
+              </a>
+            </div>
+
+            {/* Segunda Clase Virtual */}
+            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
+              <div className="text-sm text-black/60 mb-2">
+                Jueves 26 Feb, 2026
+              </div>
+              <div className="text-base md:text-lg font-medium mb-2 text-black">
+                Segunda Clase Virtual
+              </div>
+              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
+                17:00 - 22:00 GMT-6
+              </div>
+              <a
+                href="https://luma.com/m3rnfwy6"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
+              >
+                Unirse a la Reunión
+              </a>
             </div>
           </div>
         </div>
@@ -532,7 +648,7 @@ export default function LandingPage() {
                       10:00am - 6:00pm
                     </div>
                     <a
-                      href="#"
+                      href="https://luma.com/uwo84vbr"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block w-full px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-sm text-center"
@@ -549,7 +665,7 @@ export default function LandingPage() {
                       10:00am - 6:00pm
                     </div>
                     <a
-                      href="#"
+                      href="https://luma.com/k6vwbpk3"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block w-full px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-sm text-center"
@@ -569,9 +685,11 @@ export default function LandingPage() {
                     <div className="text-sm text-white/80 mb-1">
                       Jueves 12 Feb, 2026
                     </div>
-                    <div className="text-sm text-white/60 mb-3">6:00pm</div>
+                    <div className="text-sm text-white/60 mb-3">
+                      18:00 - 22:00 GMT-6
+                    </div>
                     <a
-                      href="#"
+                      href="https://luma.com/flmah653"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block w-full px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-sm text-center"
@@ -584,9 +702,11 @@ export default function LandingPage() {
                     <div className="text-sm text-white/80 mb-1">
                       Jueves 26 Feb, 2026
                     </div>
-                    <div className="text-sm text-white/60 mb-3">6:00pm</div>
+                    <div className="text-sm text-white/60 mb-3">
+                      17:00 - 22:00 GMT-6
+                    </div>
                     <a
-                      href="#"
+                      href="https://luma.com/m3rnfwy6"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-block w-full px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-sm text-center"
