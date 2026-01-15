@@ -132,9 +132,6 @@ export default function LandingPage() {
               </div>
               <div className="text-sm text-black/60 mb-4 grow">
                 <ul className="list-disc list-inside space-y-2">
-                  <li>
-                    Evento enfocado en desarrollo con IA para la hackathon
-                  </li>
                   <li>Fundamentales del ecosistema Starknet</li>
                   <li>Proceso de desarrollo con IA sobre Starknet</li>
                   <li>Qué busca la fundación de Starknet y Starkware</li>
@@ -142,18 +139,7 @@ export default function LandingPage() {
               </div>
               <div className="border-t border-black/10 pt-3 mb-3">
                 <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>• Comida y bebidas incluidas (almuerzo y café)</li>
-                  <li>
-                    • Unirse a Discord:{" "}
-                    <a
-                      href="https://discord.gg/RAnzE3HFYA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-black/70"
-                    >
-                      discord.gg/RAnzE3HFYA
-                    </a>
-                  </li>
+                  <li>• Comida y bebidas incluidas</li>
                   <li>• Lugar: TBD</li>
                 </ul>
               </div>
@@ -188,10 +174,6 @@ export default function LandingPage() {
               </div>
               <div className="text-sm text-black/60 mb-4 grow">
                 <ul className="list-disc list-inside space-y-2">
-                  <li>
-                    Evento online enfocado en desarrollo con IA para la
-                    hackathon
-                  </li>
                   <li>DeFi y BTCFi en Starknet</li>
                   <li>Vesu (préstamos con Bitcoin y USDC)</li>
                   <li>
@@ -203,17 +185,6 @@ export default function LandingPage() {
               </div>
               <div className="border-t border-black/10 pt-3 mb-3">
                 <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>
-                    • Unirse a Discord:{" "}
-                    <a
-                      href="https://discord.gg/RAnzE3HFYA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-black/70"
-                    >
-                      discord.gg/RAnzE3HFYA
-                    </a>
-                  </li>
                   <li>• Lugar: En línea</li>
                 </ul>
               </div>
@@ -248,7 +219,6 @@ export default function LandingPage() {
               </div>
               <div className="text-sm text-black/60 mb-4 grow">
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Segunda meetup presencial y transmitida online</li>
                   <li>Espacio para codear todo el día y pulir proyectos</li>
                   <li>Recibir feedback y corregir bugs</li>
                   <li>
@@ -258,22 +228,7 @@ export default function LandingPage() {
               </div>
               <div className="border-t border-black/10 pt-3 mb-3">
                 <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>• Comida y bebidas incluidas (almuerzo y café)</li>
-                  <li>
-                    • Unirse a Discord:{" "}
-                    <a
-                      href="https://discord.gg/RAnzE3HFYA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-black/70"
-                    >
-                      discord.gg/RAnzE3HFYA
-                    </a>
-                  </li>
-                  <li>
-                    • Requisito: Herramienta de desarrollo con IA (Claude code,
-                    Antigravity, Cursor)
-                  </li>
+                  <li>• Comida y bebidas incluidas</li>
                   <li>• Lugar: TBD</li>
                 </ul>
               </div>
@@ -308,7 +263,6 @@ export default function LandingPage() {
               </div>
               <div className="text-sm text-black/60 mb-4 grow">
                 <ul className="list-disc list-inside space-y-2">
-                  <li>Última sesión completamente virtual</li>
                   <li>Revisar últimos detalles de los proyectos y pulirlos</li>
                   <li>
                     Revisar pitch decks para asegurar calidad del submission
@@ -318,21 +272,6 @@ export default function LandingPage() {
               </div>
               <div className="border-t border-black/10 pt-3 mb-3">
                 <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>
-                    • Unirse a Discord:{" "}
-                    <a
-                      href="https://discord.gg/RAnzE3HFYA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-black/70"
-                    >
-                      discord.gg/RAnzE3HFYA
-                    </a>
-                  </li>
-                  <li>
-                    • Requisito: Herramienta de desarrollo con IA (Claude code,
-                    Antigravity, Cursor)
-                  </li>
                   <li>• Lugar: En línea</li>
                 </ul>
               </div>
@@ -459,34 +398,9 @@ export default function LandingPage() {
               <div className="text-base md:text-lg font-medium mb-2 text-black">
                 Primer Meetup Presencial
               </div>
-              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-3">
+              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
                 10:00 - 18:00
               </div>
-              <div className="text-sm text-black/60 mb-3 grow">
-                <ul className="list-disc list-inside space-y-1">
-                  <li>
-                    Evento enfocado en desarrollo con IA para la hackathon
-                  </li>
-                  <li>Fundamentales del ecosistema Starknet</li>
-                  <li>Proceso de desarrollo con IA sobre Starknet</li>
-                  <li>Qué busca la fundación de Starknet y Starkware</li>
-                </ul>
-              </div>
-              <div className="text-xs text-black/50 mb-2">
-                • Comida y bebidas incluidas (almuerzo y café)
-              </div>
-              <div className="text-xs text-black/50 mb-2">
-                • Discord:{" "}
-                <a
-                  href="https://discord.gg/RAnzE3HFYA"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="underline"
-                >
-                  discord.gg/RAnzE3HFYA
-                </a>
-              </div>
-              <div className="text-xs text-black/50 mb-3">Lugar: TBD</div>
               <a
                 href="https://luma.com/uwo84vbr"
                 target="_blank"
@@ -507,37 +421,6 @@ export default function LandingPage() {
               </div>
               <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
                 18:00 - 22:00 GMT-6
-              </div>
-              <div className="text-sm text-black/60 mb-4 grow">
-                <ul className="list-disc list-inside space-y-2">
-                  <li>
-                    Evento online enfocado en desarrollo con IA para la
-                    hackathon
-                  </li>
-                  <li>DeFi y BTCFi en Starknet</li>
-                  <li>Vesu (préstamos con Bitcoin y USDC)</li>
-                  <li>
-                    Extended API (futuros perpetuos, funding rate arbitrage y
-                    delta neutral)
-                  </li>
-                  <li>Mentorship para sus proyectos</li>
-                </ul>
-              </div>
-              <div className="border-t border-black/10 pt-3 mb-3">
-                <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>
-                    • Unirse a Discord:{" "}
-                    <a
-                      href="https://discord.gg/RAnzE3HFYA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-black/70"
-                    >
-                      discord.gg/RAnzE3HFYA
-                    </a>
-                  </li>
-                  <li>• Lugar: En línea</li>
-                </ul>
               </div>
               <a
                 href="https://luma.com/flmah653"
@@ -560,37 +443,6 @@ export default function LandingPage() {
               <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
                 10:00 - 18:00
               </div>
-              <div className="text-sm text-black/60 mb-4 grow">
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Segunda meetup presencial y transmitida online</li>
-                  <li>Espacio para codear todo el día y pulir proyectos</li>
-                  <li>Recibir feedback y corregir bugs</li>
-                  <li>
-                    Aclarar dudas y hacer que los proyectos luzcan profesionales
-                  </li>
-                </ul>
-              </div>
-              <div className="border-t border-black/10 pt-3 mb-3">
-                <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>• Comida y bebidas incluidas (almuerzo y café)</li>
-                  <li>
-                    • Unirse a Discord:{" "}
-                    <a
-                      href="https://discord.gg/RAnzE3HFYA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-black/70"
-                    >
-                      discord.gg/RAnzE3HFYA
-                    </a>
-                  </li>
-                  <li>
-                    • Requisito: Herramienta de desarrollo con IA (Claude code,
-                    Antigravity, Cursor)
-                  </li>
-                  <li>• Lugar: TBD</li>
-                </ul>
-              </div>
               <a
                 href="https://luma.com/k6vwbpk3"
                 target="_blank"
@@ -611,36 +463,6 @@ export default function LandingPage() {
               </div>
               <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
                 17:00 - 22:00 GMT-6
-              </div>
-              <div className="text-sm text-black/60 mb-4 grow">
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Última sesión completamente virtual</li>
-                  <li>Revisar últimos detalles de los proyectos y pulirlos</li>
-                  <li>
-                    Revisar pitch decks para asegurar calidad del submission
-                  </li>
-                  <li>Enfoque en la presentación del producto</li>
-                </ul>
-              </div>
-              <div className="border-t border-black/10 pt-3 mb-3">
-                <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>
-                    • Unirse a Discord:{" "}
-                    <a
-                      href="https://discord.gg/RAnzE3HFYA"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="underline hover:text-black/70"
-                    >
-                      discord.gg/RAnzE3HFYA
-                    </a>
-                  </li>
-                  <li>
-                    • Requisito: Herramienta de desarrollo con IA (Claude code,
-                    Antigravity, Cursor)
-                  </li>
-                  <li>• Lugar: En línea</li>
-                </ul>
               </div>
               <a
                 href="https://luma.com/m3rnfwy6"
