@@ -1,332 +1,116 @@
-import { Header } from "@/components/Header";
 import { Footer } from "@/components/Footer";
+import { JourneySection } from "@/components/JourneySection";
+import {
+  Shield,
+  Bitcoin,
+  Globe,
+  Rocket,
+  Zap,
+  Target,
+  Eye,
+  Calendar,
+  MapPin,
+  Clock
+} from "lucide-react";
 
 export default function LandingPage() {
   return (
     <main className="min-h-screen bg-[#FFFFFF]">
-      <Header />
 
       {/* Hero Section */}
-      <section className="pt-32 pb-20 md:pt-40 md:pb-32 px-4 md:px-8 lg:px-12">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-12 md:mb-16">
-            <div className="mb-4 text-sm md:text-base text-black/60">
-              100% Virtual · Registro hasta el 28 de Feb · 1-28 Feb, 2026
+      <section className="relative pt-24 pb-16 md:pt-32 md:pb-24 px-4 md:px-8 lg:px-12 overflow-hidden">
+        {/* ASCII Art Background */}
+        <div className="absolute inset-0 flex items-center justify-center pointer-events-none select-none">
+          <img
+            src="/cavos-ascii.png"
+            alt=""
+            className="w-[300px] md:w-[400px] lg:w-[520px] opacity-60 -mt-96 md:-mt-96"
+            style={{ filter: 'none' }}
+          />
+        </div>
+
+        <div className="max-w-4xl mx-auto relative z-10">
+          <div className="text-center">
+            {/* Centered Logo */}
+            <div className="flex justify-center mb-20 md:mb-16 mt-24 md:mt-24">
+              <img
+                src="/starknet-logo.png"
+                alt="Bitcoin Privacy Hackathon"
+                className="w-24 h-24 md:w-24 md:h-24"
+              />
             </div>
-            <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-[-0.02em] mb-6 md:mb-8 text-black">
-              BTC PRIVACY
+
+            <h1 className="text-2xl md:text-3xl lg:text-5xl font-semibold tracking-tighter mb-4 md:mb-6 mt-4 md:mt-6 text-black leading-tight">
+              Re{'{'}define{'}'}
               <br />
-              HACKATHON
+              Hackathon
             </h1>
-            <p className="text-xl md:text-2xl lg:text-3xl text-black/80 mb-4 md:mb-6 max-w-4xl mx-auto leading-relaxed">
-              Construye aplicaciones de Bitcoin y Privacidad en Starknet
-            </p>
-            <p className="text-lg md:text-xl text-black/60 mb-8 md:mb-12 max-w-4xl mx-auto">
+
+            <p className="text-lg md:text-xl text-black/70 mb-4 max-w-2xl mx-auto">
               Hasta $21,500 en premios. Aplica para grants. Lanza tu proyecto.
             </p>
-            <div className="flex flex-col sm:flex-row gap-4 md:gap-6 justify-center items-center">
+
+            <p className="text-base md:text-lg text-black/50 mb-8 md:mb-10">
+              Del 1 al 28 de febrero
+            </p>
+
+            {/* Action Buttons */}
+            <div className="flex flex-col sm:flex-row gap-3 md:gap-4 justify-center items-center mb-12 md:mb-16">
               <a
-                href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=hackathon-starknet-org&utm_medium=cta&utm_campaign=2026"
+                href="https://dorahacks.io/hackathon/redefine/detail"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 md:px-12 py-4 md:py-5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-base md:text-lg"
+                className="px-12 py-3 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-base"
               >
-                Registra tu idea
+                Regístrate aquí
               </a>
               <a
                 href="https://luma.com/cavos?k=c"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="px-8 md:px-12 py-4 md:py-5 bg-[#f7eded] text-black rounded-full font-medium hover:bg-[#efe5e5] transition-all text-base md:text-lg"
+                className="px-12 py-3 bg-white text-black border border-black/30 rounded-full font-medium hover:bg-black/5 transition-all text-base"
               >
-                Únete a los Meetups →
-              </a>
-              <a
-                href="#about"
-                className="px-8 md:px-12 py-4 md:py-5 bg-[#f7eded] text-black rounded-full font-medium hover:bg-[#efe5e5] transition-all text-base md:text-lg"
-              >
-                Saber Más
+                Meetups
               </a>
             </div>
-            <div className="mt-8 text-sm text-black/50">
-              Apoyado por: Starknet Foundation, StarkWare, OpenZeppelin
+
+            {/* Backed by Section */}
+            <div>
+              <p className="text-sm text-black/50 mb-6">Respaldado por</p>
+              <div className="flex items-center justify-center gap-8 md:gap-16">
+                <img
+                  src="/sn-foundation-logo.png"
+                  alt="Starknet Foundation"
+                  className="h-5 md:h-6 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                  src="/starkware-logo.png"
+                  alt="StarkWare"
+                  className="h-5 md:h-6 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                />
+                <img
+                  src="/openzeppelin-logo.webp"
+                  alt="OpenZeppelin"
+                  className="h-5 md:h-6 object-contain opacity-70 hover:opacity-100 transition-opacity"
+                />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
       {/* Journey/Timeline Section */}
-      <section className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-black/5">
-        <div className="max-w-7xl mx-auto">
-          <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[-0.02em] mb-6 md:mb-8 text-black">
-              Tu Viaje
-            </h2>
-            <p className="text-base md:text-lg text-black/70 max-w-2xl mx-auto mb-8">
-              El hackathon es 100% virtual, pero organizamos actividades
-              presenciales y en línea en Costa Rica para apoyar a los
-              desarrolladores locales.
-            </p>
-          </div>
-
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* 1. Registro */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center flex flex-col">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
-                1
-              </div>
-              <div className="text-sm text-black/60 mb-2">15 Ene</div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Registro
-              </div>
-              <div className="text-sm text-black/60 mb-4 grow">
-                Regístrate en DoraHacks
-              </div>
-              <a
-                href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Registrarse
-              </a>
-            </div>
-
-            {/* 2. Inicio del Hackathon */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
-                2
-              </div>
-              <div className="text-sm text-black/60 mb-2">
-                Sábado 01 Feb, 2026
-              </div>
-              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-2">
-                Inicio
-              </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Inicio del Hackathon
-              </div>
-              <div className="text-sm text-black/60">
-                El hackathon comienza oficialmente. ¡Empieza a construir!
-              </div>
-            </div>
-
-            {/* 3. Primer Meetup */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black text-center">
-                3
-              </div>
-              <div className="text-sm text-black/60 mb-2 text-center">
-                Sábado 07 Feb, 2026
-              </div>
-              <div className="flex gap-2 justify-center mb-4 flex-wrap">
-                <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  Presencial y Online
-                </div>
-                <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  10:00 - 18:00
-                </div>
-              </div>
-              <div className="text-base md:text-lg font-medium mb-3 text-black text-center">
-                Primer Meetup
-              </div>
-              <div className="text-sm text-black/60 mb-4 grow">
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Fundamentales del ecosistema Starknet</li>
-                  <li>Proceso de desarrollo con IA sobre Starknet</li>
-                  <li>Qué busca la fundación de Starknet y Starkware</li>
-                </ul>
-              </div>
-              <div className="border-t border-black/10 pt-3 mb-3">
-                <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>• Comida y bebidas incluidas</li>
-                  <li>• Lugar: TBD</li>
-                </ul>
-              </div>
-              <a
-                href="https://luma.com/uwo84vbr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Reservar Spot
-              </a>
-            </div>
-
-            {/* 4. Segundo Meetup */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black text-center">
-                4
-              </div>
-              <div className="text-sm text-black/60 mb-2 text-center">
-                Jueves 12 Feb, 2026
-              </div>
-              <div className="flex gap-2 justify-center mb-4 flex-wrap">
-                <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  En línea
-                </div>
-                <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  18:00 - 22:00 GMT-6
-                </div>
-              </div>
-              <div className="text-base md:text-lg font-medium mb-4 text-black text-center">
-                Segundo Meetup
-              </div>
-              <div className="text-sm text-black/60 mb-4 grow">
-                <ul className="list-disc list-inside space-y-2">
-                  <li>DeFi y BTCFi en Starknet</li>
-                  <li>Vesu (préstamos con Bitcoin y USDC)</li>
-                  <li>
-                    Extended API (futuros perpetuos, funding rate arbitrage y
-                    delta neutral)
-                  </li>
-                  <li>Mentorship para sus proyectos</li>
-                </ul>
-              </div>
-              <div className="border-t border-black/10 pt-3 mb-3">
-                <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>• Lugar: En línea</li>
-                </ul>
-              </div>
-              <a
-                href="https://luma.com/flmah653"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Unirse a la Reunión
-              </a>
-            </div>
-
-            {/* 5. Tercer Meetup */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black text-center">
-                5
-              </div>
-              <div className="text-sm text-black/60 mb-2 text-center">
-                Sábado 21 Feb, 2026
-              </div>
-              <div className="flex gap-2 justify-center mb-4 flex-wrap">
-                <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  Presencial y Online
-                </div>
-                <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  10:00 - 18:00
-                </div>
-              </div>
-              <div className="text-base md:text-lg font-medium mb-4 text-black text-center">
-                Tercer Meetup
-              </div>
-              <div className="text-sm text-black/60 mb-4 grow">
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Espacio para codear todo el día y pulir proyectos</li>
-                  <li>Recibir feedback y corregir bugs</li>
-                  <li>
-                    Aclarar dudas y hacer que los proyectos luzcan profesionales
-                  </li>
-                </ul>
-              </div>
-              <div className="border-t border-black/10 pt-3 mb-3">
-                <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>• Comida y bebidas incluidas</li>
-                  <li>• Lugar: TBD</li>
-                </ul>
-              </div>
-              <a
-                href="https://luma.com/k6vwbpk3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Reservar Spot
-              </a>
-            </div>
-
-            {/* 6. Cuarto Meetup */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black text-center">
-                6
-              </div>
-              <div className="text-sm text-black/60 mb-2 text-center">
-                Jueves 26 Feb, 2026
-              </div>
-              <div className="flex gap-2 justify-center mb-4 flex-wrap">
-                <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  En línea
-                </div>
-                <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60">
-                  17:00 - 22:00 GMT-6
-                </div>
-              </div>
-              <div className="text-base md:text-lg font-medium mb-4 text-black text-center">
-                Cuarto Meetup
-              </div>
-              <div className="text-sm text-black/60 mb-4 grow">
-                <ul className="list-disc list-inside space-y-2">
-                  <li>Revisar últimos detalles de los proyectos y pulirlos</li>
-                  <li>
-                    Revisar pitch decks para asegurar calidad del submission
-                  </li>
-                  <li>Enfoque en la presentación del producto</li>
-                </ul>
-              </div>
-              <div className="border-t border-black/10 pt-3 mb-3">
-                <ul className="text-xs text-black/50 space-y-1.5">
-                  <li>• Lugar: En línea</li>
-                </ul>
-              </div>
-              <a
-                href="https://luma.com/m3rnfwy6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Unirse a la Reunión
-              </a>
-            </div>
-
-            {/* 7. Finalización / Envía */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
-                7
-              </div>
-              <div className="text-sm text-black/60 mb-2">
-                Sábado 28 Feb, 2026
-              </div>
-              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-2">
-                Fin
-              </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Finalización del Hackathon
-              </div>
-              <div className="text-sm text-black/60">
-                Último día para enviar tus proyectos
-              </div>
-            </div>
-
-            {/* 8. Winners Announced */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 text-center">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
-                8
-              </div>
-              <div className="text-sm text-black/60 mb-2">15 Mar, 2026</div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Ganadores Anunciados
-              </div>
-              <div className="text-sm text-black/60">Resultados y premios</div>
-            </div>
-          </div>
-        </div>
-      </section>
+      {/* Journey/Timeline Section */}
+      <JourneySection />
 
       {/* About Section */}
       <section
         id="about"
-        className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-black/5"
+        className="py-20 md:py-32 px-4 md:px-8 lg:px-12"
       >
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[-0.02em] mb-6 md:mb-8 text-black">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-[-0.02em] mb-6 md:mb-8 text-black">
               Sobre el Hackathon
             </h2>
             <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto leading-relaxed">
@@ -341,137 +125,51 @@ export default function LandingPage() {
             </p>
           </div>
 
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8 mb-12">
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
+          {/* Key Stats Grid */}
+          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-4 md:gap-6 mb-12">
+            <div className="bg-white border border-black/5 rounded-2xl p-6 md:p-8 text-center transition-colors duration-300">
+              <div className="text-4xl md:text-5xl font-bold mb-3 text-black tracking-tighter">
                 100%
               </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Virtual
+              <div className="text-sm font-semibold uppercase tracking-widest text-black/40 mb-2">
+                Modalidad
               </div>
-              <div className="text-sm text-black/60">
-                Construye desde cualquier parte del mundo
+              <div className="text-base text-black/80 font-medium">
+                Virtual Global
               </div>
             </div>
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
-                $21.5K+
+            <div className="bg-white border border-black/5 rounded-2xl p-6 md:p-8 text-center transition-colors duration-300">
+              <div className="text-4xl md:text-5xl font-bold mb-3 text-black tracking-tighter">
+                $21.5k
               </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
+              <div className="text-sm font-semibold uppercase tracking-widest text-black/40 mb-2">
                 Premios
               </div>
-              <div className="text-sm text-black/60">
-                Bolsa de premios competitiva
+              <div className="text-base text-black/80 font-medium">
+                Pool de Premios
               </div>
             </div>
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
+            <div className="bg-white border border-black/5 rounded-2xl p-6 md:p-8 text-center transition-colors duration-300">
+              <div className="text-4xl md:text-5xl font-bold mb-3 text-black tracking-tighter">
                 Todos
               </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
+              <div className="text-sm font-semibold uppercase tracking-widest text-black/40 mb-2">
                 Niveles
               </div>
-              <div className="text-sm text-black/60">
-                Abierto a todos los niveles
+              <div className="text-base text-black/80 font-medium">
+                Principiantes a Expertos
               </div>
             </div>
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
-              <div className="text-3xl md:text-4xl font-bold mb-3 text-black">
+            <div className="bg-white border border-black/5 rounded-2xl p-6 md:p-8 text-center transition-colors duration-300">
+              <div className="text-4xl md:text-5xl font-bold mb-3 text-black tracking-tighter">
                 Grants
               </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Pipeline
+              <div className="text-sm font-semibold uppercase tracking-widest text-black/40 mb-2">
+                Futuro
               </div>
-              <div className="text-sm text-black/60">
-                Oportunidad de grants post-hackathon
+              <div className="text-base text-black/80 font-medium">
+                Vía Rápida a Financiación
               </div>
-            </div>
-          </div>
-
-          {/* Meetups Details */}
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            {/* Primer Evento Presencial */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
-              <div className="text-sm text-black/60 mb-2">
-                Sábado 07 Feb, 2026
-              </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Primer Meetup Presencial
-              </div>
-              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
-                10:00 - 18:00
-              </div>
-              <a
-                href="https://luma.com/uwo84vbr"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Reservar Spot
-              </a>
-            </div>
-
-            {/* Primera Clase Virtual */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
-              <div className="text-sm text-black/60 mb-2">
-                Jueves 12 Feb, 2026
-              </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Primera Clase Virtual
-              </div>
-              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
-                18:00 - 22:00 GMT-6
-              </div>
-              <a
-                href="https://luma.com/flmah653"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Unirse a la Reunión
-              </a>
-            </div>
-
-            {/* Segundo Evento Presencial */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
-              <div className="text-sm text-black/60 mb-2">
-                Sábado 21 Feb, 2026
-              </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Segundo Meetup Presencial
-              </div>
-              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
-                10:00 - 18:00
-              </div>
-              <a
-                href="https://luma.com/k6vwbpk3"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Reservar Spot
-              </a>
-            </div>
-
-            {/* Segunda Clase Virtual */}
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8 flex flex-col">
-              <div className="text-sm text-black/60 mb-2">
-                Jueves 26 Feb, 2026
-              </div>
-              <div className="text-base md:text-lg font-medium mb-2 text-black">
-                Segunda Clase Virtual
-              </div>
-              <div className="text-xs px-2 py-1 bg-black/5 rounded-full text-black/60 inline-block mb-4">
-                17:00 - 22:00 GMT-6
-              </div>
-              <a
-                href="https://luma.com/m3rnfwy6"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-block w-full px-6 py-2.5 bg-black text-white rounded-full font-medium hover:bg-black/90 transition-all text-sm text-center mt-auto"
-              >
-                Unirse a la Reunión
-              </a>
             </div>
           </div>
         </div>
@@ -481,7 +179,7 @@ export default function LandingPage() {
       <section className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-black/5">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[-0.02em] mb-4 md:mb-6 text-black">
+            <h2 className="text-4xl md:text-5xl font-bold tracking-[-0.02em] mb-4 md:mb-6 text-black">
               Categorías y Premios
             </h2>
             <p className="text-lg md:text-xl text-black/60 max-w-2xl mx-auto">
@@ -492,54 +190,87 @@ export default function LandingPage() {
 
           <div className="grid md:grid-cols-3 gap-6 md:gap-8">
             {/* Privacy Track */}
-            <div className="bg-white border border-black/10 rounded-2xl p-8 md:p-10 hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
-                Categoría Privacidad
+            <div className="group bg-white border border-black/5 rounded-3xl p-8 md:p-10 transition-all duration-300">
+              <div className="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6 text-black transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"></rect><path d="M7 11V7a5 5 0 0 1 10 0v4"></path></svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-black">
+                Privacidad
               </h3>
-              <p className="text-base text-black/70 mb-6 leading-relaxed">
+              <p className="text-base text-black/60 mb-6 leading-relaxed">
                 Construye aplicaciones que preserven la privacidad usando
                 STARKs, pruebas de conocimiento cero y transacciones
                 confidenciales en Starknet.
               </p>
-              <ul className="space-y-2 text-sm text-black/60">
-                <li>• Pagos privados</li>
-                <li>• Votación anónima</li>
-                <li>• DeFi confidencial</li>
-                <li>• Soberanía de datos</li>
+              <ul className="space-y-3 text-sm text-black/50 font-medium">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Pagos privados
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Votación anónima
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> DeFi confidencial
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Soberanía de datos
+                </li>
               </ul>
             </div>
 
             {/* Bitcoin Track */}
-            <div className="bg-white border border-black/10 rounded-2xl p-8 md:p-10 hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
-                Categoría Bitcoin
+            <div className="group bg-white border border-black/5 rounded-3xl p-8 md:p-10 transition-all duration-300">
+              <div className="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6 text-black transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M16 8h-6a2 2 0 1 0 0 4h4a2 2 0 1 1 0 4H8"></path><path d="M10 6v2"></path><path d="M14 6v2"></path><path d="M10 16v2"></path><path d="M14 16v2"></path></svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-black">
+                Bitcoin
               </h3>
-              <p className="text-base text-black/70 mb-6 leading-relaxed">
+              <p className="text-base text-black/60 mb-6 leading-relaxed">
                 Crea DeFi nativo de BTC aprovechando la seguridad y
                 escalabilidad de Starknet.
               </p>
-              <ul className="space-y-2 text-sm text-black/60">
-                <li>• Pagos privados con Bitcoin</li>
-                <li>• Ordinals en Starknet</li>
-                <li>• Integraciones Lightning</li>
-                <li>• DeFi privado con Bitcoin</li>
+              <ul className="space-y-3 text-sm text-black/50 font-medium">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Pagos privados en BTC
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Ordinals en Starknet
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Infraestructura Lightning
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> BTCFi
+                </li>
               </ul>
             </div>
 
             {/* Open Track */}
-            <div className="bg-white border border-black/10 rounded-2xl p-8 md:p-10 hover:shadow-lg transition-shadow">
-              <h3 className="text-2xl md:text-3xl font-bold mb-4 text-black">
+            <div className="group bg-white border border-black/5 rounded-3xl p-8 md:p-10 transition-all duration-300">
+              <div className="w-12 h-12 bg-black/5 rounded-full flex items-center justify-center mb-6 text-black transition-colors">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><circle cx="12" cy="12" r="10"></circle><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon></svg>
+              </div>
+              <h3 className="text-2xl font-bold mb-4 text-black">
                 Categoría Abierta
               </h3>
-              <p className="text-base text-black/70 mb-6 leading-relaxed">
+              <p className="text-base text-black/60 mb-6 leading-relaxed">
                 Construye cualquier producto innovador en Starknet. Gaming,
                 social, pagos—sorpréndenos con casos de uso reales.
               </p>
-              <ul className="space-y-2 text-sm text-black/60">
-                <li>• Gaming</li>
-                <li>• Apps sociales</li>
-                <li>• Pagos</li>
-                <li>• Apps de consumo</li>
+              <ul className="space-y-3 text-sm text-black/50 font-medium">
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Fully On-Chain Games
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Apps sociales
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Consumer Crypto
+                </li>
+                <li className="flex items-center gap-2">
+                  <span className="w-1.5 h-1.5 rounded-full bg-black/30"></span> Herramientas para DAOs
+                </li>
               </ul>
             </div>
           </div>
@@ -550,7 +281,7 @@ export default function LandingPage() {
       <section className="py-20 md:py-32 px-4 md:px-8 lg:px-12">
         <div className="max-w-7xl mx-auto">
           <div className="text-center mb-16 md:mb-20">
-            <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[-0.02em] mb-6 md:mb-8 text-black">
+            <h2 className="text-2xl md:text-3xl lg:text-5xl font-bold tracking-[-0.02em] mb-6 md:mb-8 text-black">
               Adónde Te Puede Llevar Ganar
             </h2>
             <p className="text-lg md:text-xl text-black/70 max-w-3xl mx-auto leading-relaxed">
@@ -560,162 +291,108 @@ export default function LandingPage() {
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-black">
+            <div className="group bg-white border border-black/5 rounded-2xl p-6 md:p-8 transition-all duration-300">
+              <div className="w-10 h-10 bg-black/5 rounded-full flex items-center justify-center mb-4 text-black transition-colors">
+                <Target size={20} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">
                 Grants
               </h3>
-              <p className="text-sm text-black/60">
+              <p className="text-sm text-black/60 leading-relaxed">
                 Aplica para grants semilla de hasta $25K a través de revisión de
-                la Fundación
+                la Fundación.
               </p>
             </div>
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-black">
+            <div className="group bg-white border border-black/5 rounded-2xl p-6 md:p-8 transition-all duration-300">
+              <div className="w-10 h-10 bg-black/5 rounded-full flex items-center justify-center mb-4 text-black transition-colors">
+                <Rocket size={20} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">
                 Aceleradora
               </h3>
-              <p className="text-sm text-black/60">
-                Aplica para mentoría y apoyo para lanzar
+              <p className="text-sm text-black/60 leading-relaxed">
+                Aplica para mentoría y apoyo estratégico para lanzar tu producto al mercado.
               </p>
             </div>
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-black">
-                Apoyo de Fundraising
+            <div className="group bg-white border border-black/5 rounded-2xl p-6 md:p-8 transition-all duration-300">
+              <div className="w-10 h-10 bg-black/5 rounded-full flex items-center justify-center mb-4 text-black transition-colors">
+                <Zap size={20} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">
+                Apoyo Fundraising
               </h3>
-              <p className="text-sm text-black/60">
-                Introducciones a VCs y preparación de pitch
+              <p className="text-sm text-black/60 leading-relaxed">
+                Introducciones a VCs, preparación de pitch y red de inversores.
               </p>
             </div>
-            <div className="bg-white border border-black/10 rounded-2xl p-6 md:p-8">
-              <h3 className="text-xl md:text-2xl font-bold mb-3 text-black">
+            <div className="group bg-white border border-black/5 rounded-2xl p-6 md:p-8 transition-all duration-300">
+              <div className="w-10 h-10 bg-black/5 rounded-full flex items-center justify-center mb-4 text-black transition-colors">
+                <Eye size={20} />
+              </div>
+              <h3 className="text-xl font-bold mb-3 text-black">
                 Visibilidad
               </h3>
-              <p className="text-sm text-black/60">
-                Exposición en el ecosistema y reconocimiento de la comunidad
+              <p className="text-sm text-black/60 leading-relaxed">
+                Exposición en el ecosistema, newsletters y reconocimiento de la comunidad.
               </p>
             </div>
           </div>
-          <p className="text-center mt-8 text-sm text-black/60 max-w-3xl mx-auto">
-            Los ganadores pueden aplicar para grants y programas de
-            aceleradora—la selección se basa en el mérito del proyecto y la
-            revisión del panel. Algunos equipos se saltan los grants
-            completamente y van directo a fundraising o lanzan de forma
-            independiente.
-          </p>
+
+          <div className="mt-12 bg-black/5 rounded-2xl p-6 md:p-8 text-center max-w-3xl mx-auto">
+            <p className="text-sm md:text-base text-black/70">
+              Los ganadores pueden aplicar para grants y programas de
+              aceleradora—la selección se basa en el mérito del proyecto y la
+              revisión del panel. Algunos equipos se saltan los grants
+              completamente y van directo a fundraising.
+            </p>
+          </div>
         </div>
       </section>
 
       {/* Apply Section */}
       <section
         id="apply"
-        className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-black text-white"
+        className="py-20 md:py-32 px-4 md:px-8 lg:px-12 bg-black text-white overflow-hidden relative"
       >
-        <div className="max-w-4xl mx-auto text-center">
-          <h2 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-[-0.02em] mb-6 md:mb-8">
+        <div className="absolute inset-0 bg-[url('/cavos-ascii.png')] opacity-10 bg-center bg-no-repeat bg-cover pointer-events-none"></div>
+        <div className="max-w-5xl mx-auto text-center relative z-10">
+          <h2 className="text-3xl md:text-5xl font-bold tracking-[-0.03em] mb-8 md:mb-10">
             ¿Listo para Construir?
           </h2>
-          <p className="text-xl md:text-2xl text-white/80 mb-12 md:mb-16 leading-relaxed">
-            Únete al Hackathon de Bitcoin y Privacidad 2026. 4 semanas. Hasta
-            $21,500 en premios.
+          <p className="text-xl md:text-2xl text-white/70 mb-12 md:mb-16 leading-relaxed max-w-3xl mx-auto">
+            Únete al Hackathon de Bitcoin y Privacidad 2026.
+            <br className="hidden md:block" />
+            <span className="text-white">4 semanas. Hasta $21,500 en premios.</span>
           </p>
           <a
-            href="https://dorahacks.io/hackathon/bitcoinxprivacy/detail?utm_source=hackathon-starknet-org&utm_medium=cta&utm_campaign=2026"
+            href="https://dorahacks.io/hackathon/redefine/detail"
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-block px-12 md:px-16 py-5 md:py-6 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-lg md:text-xl"
+            className="group inline-flex items-center gap-3 px-10 md:px-16 py-4 md:py-6 bg-white text-black rounded-full font-bold hover:bg-white/90 transition-all text-lg md:text-xl"
           >
-            Registrarse en DoraHacks →
+            Registrarse en DoraHacks
+            <Rocket className="w-5 h-5 transition-transform" />
           </a>
 
-          <div className="border-t border-white/20 pt-12 mt-16">
-            <h3 className="text-2xl md:text-3xl font-bold mb-6 md:mb-8">
-              Meetups en Costa Rica
+          <div className="border-t border-white/10 pt-16 mt-20">
+            <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-white/10 text-sm font-medium text-white/80 mb-6">
+              <MapPin size={14} /> Costa Rica & Online
+            </div>
+            <h3 className="text-2xl md:text-3xl font-bold mb-8">
+              No te pierdas los eventos
             </h3>
-            <p className="text-lg text-white/70 mb-8 max-w-2xl mx-auto">
-              Únete a nuestros meetups presenciales y virtuales para obtener
-              apoyo y mentoría durante el hackathon.
-            </p>
-            <div className="grid md:grid-cols-2 gap-4 md:gap-6 max-w-4xl mx-auto">
-              {/* Meetups Presenciales */}
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
-                <h4 className="text-xl font-bold mb-6">Meetups Presenciales</h4>
-                <div className="space-y-4">
-                  {/* Primer Meetup Presencial */}
-                  <div>
-                    <div className="text-sm text-white/80 mb-1">
-                      Sábado 07 Feb, 2026
-                    </div>
-                    <div className="text-sm text-white/60 mb-3">
-                      10:00am - 6:00pm
-                    </div>
-                    <a
-                      href="https://luma.com/uwo84vbr"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block w-full px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-sm text-center"
-                    >
-                      Reservar Spot
-                    </a>
-                  </div>
-                  {/* Segundo Meetup Presencial */}
-                  <div>
-                    <div className="text-sm text-white/80 mb-1">
-                      Sábado 21 Feb, 2026
-                    </div>
-                    <div className="text-sm text-white/60 mb-3">
-                      10:00am - 6:00pm
-                    </div>
-                    <a
-                      href="https://luma.com/k6vwbpk3"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block w-full px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-sm text-center"
-                    >
-                      Reservar Spot
-                    </a>
-                  </div>
-                </div>
-              </div>
 
-              {/* Meetups Virtuales */}
-              <div className="bg-white/10 backdrop-blur-sm border border-white/20 rounded-2xl p-6">
-                <h4 className="text-xl font-bold mb-6">Meetups Virtuales</h4>
-                <div className="space-y-4">
-                  {/* Primer Meetup Virtual */}
-                  <div>
-                    <div className="text-sm text-white/80 mb-1">
-                      Jueves 12 Feb, 2026
-                    </div>
-                    <div className="text-sm text-white/60 mb-3">
-                      18:00 - 22:00 GMT-6
-                    </div>
-                    <a
-                      href="https://luma.com/flmah653"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block w-full px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-sm text-center"
-                    >
-                      Unirse a la Reunión
-                    </a>
-                  </div>
-                  {/* Segundo Meetup Virtual */}
-                  <div>
-                    <div className="text-sm text-white/80 mb-1">
-                      Jueves 26 Feb, 2026
-                    </div>
-                    <div className="text-sm text-white/60 mb-3">
-                      17:00 - 22:00 GMT-6
-                    </div>
-                    <a
-                      href="https://luma.com/m3rnfwy6"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="inline-block w-full px-6 py-3 bg-white text-black rounded-full font-medium hover:bg-white/90 transition-all text-sm text-center"
-                    >
-                      Unirse a la Reunión
-                    </a>
-                  </div>
-                </div>
-              </div>
+            <div className="w-full max-w-4xl mx-auto">
+              <iframe
+                src="https://luma.com/embed/calendar/cal-kL2evfkpoGtKLA5/events"
+                width="100%"
+                height="600"
+                style={{ border: "1px solid #bfcbda88", borderRadius: "12px", padding: "16px" }}
+                allowFullScreen
+                aria-hidden="false"
+                tabIndex={0}
+                className="mx-auto"
+              ></iframe>
             </div>
           </div>
         </div>
